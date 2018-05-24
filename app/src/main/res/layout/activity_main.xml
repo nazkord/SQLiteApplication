@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nazar.sqliteapplication.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/input_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Type the name"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/input_age"
+        android:layout_centerHorizontal="true" />
+
+
+    <EditText
+        android:id="@+id/input_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:hint="Type the age"
+        android:layout_above="@+id/input_colorEye"
+        android:layout_alignLeft="@+id/input_name"
+        android:layout_alignStart="@+id/input_name"
+        android:layout_marginBottom="14dp" />
+
+    <EditText
+        android:id="@+id/input_colorEye"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Type the color of eye"
+        android:layout_above="@+id/input_tmpr"
+        android:layout_alignLeft="@+id/input_age"
+        android:layout_alignStart="@+id/input_age"
+        android:layout_marginBottom="14dp" />
+
+    <EditText
+        android:id="@+id/input_tmpr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/input_colorEye"
+        android:layout_alignStart="@+id/input_colorEye"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Type the temperament" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addButtonClicked"
+        android:text="Add"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/input_tmpr"
+        android:layout_alignLeft="@+id/input_tmpr"
+        android:layout_alignStart="@+id/input_tmpr"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteButtonClicked"
+        android:text="Delete"
+        android:layout_alignBaseline="@+id/addButton"
+        android:layout_alignBottom="@+id/addButton"
+        android:layout_alignRight="@+id/input_tmpr"
+        android:layout_alignEnd="@+id/input_tmpr" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>
